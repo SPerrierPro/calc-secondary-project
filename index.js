@@ -17,5 +17,7 @@ for (let i = 0; i < inputs.length; i++) {
     input.onclick = function writeOnScreen() {
         onScreen += input.value;
         console.log(onScreen);
+        const pScreen = document.querySelector("p");
+        pScreen.innerHTML = onScreen;
     }
 }

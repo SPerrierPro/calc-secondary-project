@@ -21,15 +21,17 @@ main {
     gap: 3rem;
 }
 
-.screen p {
+.screen {
     width: 30rem;
     height: 5rem;
     border: var(--button-color) solid 2px;
     border-radius: 10%;
-    margin-top: 5rem;
+    margin-top: 3rem;
     background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-
 
 .keyboard {
     display: flex;
