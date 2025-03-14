@@ -1,0 +1,65 @@
+:root {
+    --button-color: #9963b3;
+    --main-color: #fde7cab6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    background-color: var(--main-color);
+    border: var(--button-color) solid 3px;
+    border-radius: 10%;
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    margin: 30% 20%;
+    align-items: center;
+    gap: 3rem;
+}
+
+.screen p {
+    width: 30rem;
+    height: 5rem;
+    border: var(--button-color) solid 2px;
+    border-radius: 10%;
+    margin-top: 5rem;
+    background-color: #ffffff;
+}
+
+
+.keyboard {
+    display: flex;
+    border: var(--button-color) solid 2px;
+    border-radius: 10%;
+    width: 30rem;
+    height: 27rem;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+}
+
+.numbers {
+    display: grid;
+    grid-template: repeat(4, 5rem) / repeat(3, 5rem);
+    gap: 0.3rem;
+    margin: 2rem 1rem;
+}
+
+.operators {
+    display: grid;
+    grid-template: repeat(4, 5rem) / repeat(2, 5rem);
+    gap: 0.3rem;
+    margin: 2rem 1rem;
+}
+
+button {
+    border: var(--button-color) solid 1px;
+    border-radius: 15%;
+}
+
+.b0 {
+    grid-column: span 2;
+}
