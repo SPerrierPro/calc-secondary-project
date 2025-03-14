@@ -29,8 +29,23 @@ main {
     margin-top: 3rem;
     background-color: #ffffff;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
+}
+
+.main-screen {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.secondary-screen {
+    font-size: 16px;
+    font-weight: 300;
+    color: gray;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .keyboard {
