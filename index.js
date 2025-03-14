@@ -11,23 +11,35 @@ function writeOnScreen(e) {
 */
 
 const inputs = document.getElementsByTagName("button");
-let numberOnScreen = "";
+let numberOnMainScreen = "";
+let numberOnSecondScreen = "";
 let realNumber = 0;
 for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
-    let pScreen = "";
+    let mainScreenDisplay = "";
+    let secondaryScreenDisplay = "";
     input.onclick = function writeOnScreen() {
         if (Number.isInteger(parseInt(input.value)) || input.value === ".") {
-            numberOnScreen += input.value;
-            pScreen = document.querySelector(".main-screen");
-            pScreen.innerHTML = numberOnScreen;
-            realNumber = parseFloat(numberOnScreen);
-
+            numberOnMainScreen += input.value;
+            mainScreenDisplay = document.querySelector(".main-screen");
+            mainScreenDisplay.innerHTML = numberOnMainScreen;
+            realNumber = parseFloat(numberOnMainScreen);
+            //            console.log(realNumber);
         } else if (input.value === "C") {
-            numberOnScreen = "";
+            numberOnMainScreen = "";
             realNumber = 0;
-            pScreen = document.querySelector(".main-screen");
-            pScreen.innerHTML = 0;
+            mainScreenDisplay = document.querySelector(".main-screen");
+            mainScreenDisplay.innerHTML = 0;
+        } else if (input.value === "/" || input.value === "*" || input.value === "+" || input.value === "-") {
+            const operator = input.value;
+            console.log(operator);
+            numberOnSecondScreen = numberOnMainScreen;
+            numberOnMainScreen = 0;
+            secondaryScreenDisplay = document.querySelector(".secondary-screen");
+            secondaryScreenDisplay.innerHTML = numberOnSecondScreen;
+            mainScreenDisplay = document.querySelector(".main-screen");
+            mainScreenDisplay.innerHTML = numberOnMainScreen;
+            // faut encore enlever le 0 qui reste sur mon main screen quand un opéraeut est utilisé
         }
 
 
